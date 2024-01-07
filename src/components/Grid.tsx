@@ -11,9 +11,10 @@ interface TdProps {
   value: number;
 }
 
-const StyledTable = styled.div`
+const StyledTable = styled.table`
   margin: 0;
   padding: 0;
+  border-collapse: collapse;
 `;
 
 const StyledTr = styled.tr`
@@ -22,13 +23,14 @@ const StyledTr = styled.tr`
 `;
 
 const StyledTd = styled.td<TdProps>`
-  width: 10px;
-  height: 10px;
-  border-left: 1px solid var(--color-blue);
-  border-bottom: 1px solid var(--color-blue);
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-blue);
   background-color: ${(props) =>
     props.value === 1 ? "var(--color-blue)" : "#fff"};
   transition: background-color 20ms ease-in-out;
+  padding: 0;
+  margin: 0;
 `;
 
 const Grid: React.FC<GridProps> = ({ grid, play, changeCellState }) => {

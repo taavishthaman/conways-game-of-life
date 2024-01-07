@@ -4,8 +4,13 @@ import Header from "./components/Header";
 import GlobalStyles from "./styles/global";
 
 function App() {
+  const height = window.screen.height - 80;
+  const width = window.screen.width;
+
+  const N = Math.floor(height / 10);
+  const M = Math.floor(width / 10);
   const [grid, setGrid] = useState(() => {
-    return new Array(70).fill(0).map(() => new Array(150).fill(0));
+    return new Array(N).fill(0).map(() => new Array(M).fill(0));
   });
 
   const [play, setPlay] = useState(false);

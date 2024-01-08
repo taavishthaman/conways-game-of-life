@@ -15,6 +15,9 @@ const StyledHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 5rem;
+  @media (max-width: 550px) {
+    padding: 0 3rem;
+  }
 `;
 
 const StyledTitle = styled.p`
@@ -22,12 +25,19 @@ const StyledTitle = styled.p`
   color: var(--color-emerald);
   font-style: bold;
   text-transform: uppercase;
+
+  @media (max-width: 550px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const ControlPanel = styled.div`
   display: flex;
   gap: 5rem;
   align-items: center;
+  @media (max-width: 550px) {
+    gap: 3rem;
+  }
 `;
 
 const Button = styled.button`
